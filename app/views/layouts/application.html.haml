@@ -1,0 +1,37 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title RrealFitness and Wellness
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    -# = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+  %body
+    %nav.navbar.navbar-expand-md.navbar-dark.bg-dark{role: "navigation"}
+      .container-fluid
+        -# .social-icons.navbar-brand
+        -#   = bi_icon("facebook", class: "text-light", width: 20, height: 20)
+        -#   = bi_icon("instagram", class: "text-light", width: 20, height: 20)
+        -#   = bi_icon("shop", class: "text-light", width: 20, height: 20)
+
+
+        %a.navbar-brand{href: root_path} RrealFitness
+        %button.navbar-toggler{type: "button", "data-bs-toggle": "collapse", "data-bs-target": "#navbarNav", "aria-controls": "navbarNav", "aria-expanded": "false", "aria-label": "Toggle navigation"}
+          %span.navbar-toggler-icon
+
+        .collapse.navbar-collapse#navbarNav
+          %ul.navbar-nav
+            = navbar_item("Home", root_path)
+            = navbar_item("Services", "#")
+            = navbar_item("About", "#")
+            = navbar_item("Get Started", "#")
+            = navbar_item("Contact", "#")
+          %ul.navbar-nav.ms-md-auto
+            = navbar_item(bi_icon("instagram", class: "pull-right text-light", width: 20, height: 20), "#")
+            
+
+    .container-fluid.bg-dark.text-white
+      = yield
