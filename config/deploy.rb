@@ -24,7 +24,7 @@ set :repo_url, "git@github.com:eliotpiering/rreal_fitness.git"
 # append :linked_files, "config/database.yml"
 
 # # Default value for :linked_files is []
-#append :linked_files, "Rreal_fitness_prod"
+append :linked_files, "config/master.key"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "storage"
