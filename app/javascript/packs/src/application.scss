@@ -1,3 +1,7 @@
+$primary: #c8131c;
+$dark: #060000;
+
+@import '~bootstrap/scss/bootstrap';
 // $theme-colors: (
 //   "primary":    $primary,
 //   "secondary":  $secondary,
@@ -11,10 +15,14 @@
 
 
 
-@import '~bootstrap/scss/bootstrap';
-
-
 /* Custom default button */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
@@ -25,3 +33,34 @@
 .h-100 {
     height: 100% !important;
 }
+
+
+/*********************************************************************
+                        Background images
+**********************************************************************/
+#home-page-background {
+  background-image: url("../../../assets/images/KB-Deadlift.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* width: 100%; */
+  height: 20rem;
+}
+
+
+#footer-background {
+  background-image: url("../../../assets/images/Chalk-Deadlift.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* width: 100%; */
+  height: 20rem;
+}
+
+
+
+

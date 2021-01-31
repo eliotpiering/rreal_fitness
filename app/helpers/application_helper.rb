@@ -1,7 +1,11 @@
 module ApplicationHelper
-  def navbar_item(name, path)
+  def navbar_item(name, path, options={})
+    classes = "nav-link "
+    classes += "active " if current_page?(path)
+
+
     content_tag(:li, class: "nav-item") do
-      content_tag(:a, name, class: "nav-link active", aria_current: "page", href: path)
+      content_tag(:a, name, class: classes, aria_current: "page", href: path)
     end
   end
 
