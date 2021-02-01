@@ -1,0 +1,8 @@
+.row.my-4{class: (position % 2 == 0 ? "flex-row-reverse" : "")}
+  .col-md-6
+    %img.img-fluid{src: card_image_url, alt: title}
+  .col-md-6.mymd-auto.my-3.px-5
+    %h5.title= title
+    %p= body
+    %a.button.btn.btn-lg.btn-primary.fw-bold{href: free_evalutaion_path}
+      Sign up for a free evaluation

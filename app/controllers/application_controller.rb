@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
   def services
   end
 
+  def services_alt
+  end
+
   def about
   end
 
