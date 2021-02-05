@@ -1,0 +1,66 @@
+%main
+  .row.mt-5
+    .col.col-md-6.my-auto
+      %h1.title Complimentary Evaluation
+  .row.my-2.text-center#eval-page-background
+
+  .row.mx-3
+    .col.mx-md-5
+      %p
+        The body and the mind are complex, and more importantly unique, which is why Rreal Fitness and Wellness doesn’t believe in one size fits all programs for clients.  By better understanding where you’ve been and where you want to go, we can create a program that is tailored specifically to you and your goals.
+        %strong
+          Come in for a free 1 hour evaluation or set up a call to find out if Rreal Fitness and Wellness is right for you.  
+
+
+  .container
+    = form_with url: eval_path do |f|
+      .row
+        .col-md-5
+          = f.label :name, class: "form-label"
+          = f.text_field :name, required: true, class: "form-control"
+   
+        .col-md-2
+          = f.label :age, class: "form-label"
+          = f.number_field :age, class: "form-control"
+   
+        .col-md-5
+          = f.label :email, class: "form-label"
+          = f.email_field :email, required: true, class: "form-control"
+   
+      .row
+        .col-md-4
+          = f.label :phone, class: "form-label"
+          = f.phone_field :phone, class: "form-control"
+
+      %hr
+   
+      .row
+        .col
+          = f.label :fitness_goals, "Fitness and or/ Wellness Goals", class: "form-label"
+          = f.text_area :fitness_goals, class: "form-control"
+      .row
+        .col
+          = f.label :past_injuries, "Important Injuries or medical conditions", class: "form-label"
+          = f.text_area :past_injuries, class: "form-control"
+
+      %hr
+   
+      .row
+        .col-md-6
+          = f.label :date_1, "When are you available?", class: "form-label"
+          = f.text_field :date_1, class: "form-control date-time-select"
+   
+        .col-md-6
+          = f.label :date_2, "Additional availability", class: "form-label"
+          = f.text_field :date_2, class: "form-control date-time-select"
+   
+      .row
+        .col
+          = f.label :how_did_you_hear_about_us, "How did you hear about Rreal Fitness and Wellness?", class: "form-label"
+          = f.text_area :how_did_you_hear_about_us, class: "form-control"
+
+      %hr
+
+      .row
+        .col
+          = f.submit "Sign Up", class: "btn btn-primary"

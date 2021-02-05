@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get "/about", to: "application#about"
   get "/services", to: "application#services"
   get "/services_alt", to: "application#services_alt"
-  get "/free_evalutaion", to: "application#evaluation"
+  get "/free_eval", to: "application#free_eval"
+  post "/eval", to: "application#free_eval_signup"
 end

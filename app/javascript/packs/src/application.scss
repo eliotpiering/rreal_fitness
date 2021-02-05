@@ -53,7 +53,17 @@ $dark: #060000;
                         Background images
 **********************************************************************/
 #home-page-background {
-  background-image: url("../../../assets/images/KB-Deadlift.jpg");
+  background-image: url("../../../assets/images/Chalk-Deadlift-Filtered.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 20rem;
+}
+
+#eval-page-background {
+  background-image: url("../../../assets/images/Female-KB.jpg");
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -64,7 +74,7 @@ $dark: #060000;
 
 
 #footer-background {
-  background-image: url("../../../assets/images/Chalk-Deadlift.jpg");
+  background-image: url("../../../assets/images/Chalk-Deadlift-Filtered.jpg");
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
