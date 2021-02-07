@@ -8,6 +8,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import Alert from 'bootstrap/js/dist/alert';
+import 'bootstrap'
 import './src/application.scss'
 
 require("flatpickr/dist/themes/dark.css");
@@ -25,7 +26,7 @@ document.addEventListener("turbolinks:load", function() {
 
   var alertList = document.querySelectorAll('.alert')
   alertList.forEach(function (alert) {
-      new bootstrap.Alert(alert)
+      new Alert(alert)
   })
 
   var honeypots = document.querySelectorAll('.email-confirmation')
