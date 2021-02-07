@@ -23,8 +23,8 @@ class ContactMailer < ApplicationMailer
     @phone = data[:phone]
     @fitness_goals = data[:fitness_goals]
     @past_injuries = data[:past_injuries]
-    @date_1 = data[:date_2]
-    @date_2 = data[:date_2]
+    @date1 = data[:date1]
+    @date2 = data[:date2]
     @how_did_you_hear_about_us = data[:how_did_you_hear_about_us]
 
     @data = data
