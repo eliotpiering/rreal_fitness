@@ -1,0 +1,34 @@
+%main.container
+  .row.mt-5
+    .col.text-center
+      %h3.title Contact info
+
+
+  .row
+    .col.text-center.img-fluid.col-md-8
+      %img.img-fluid{src: image_path("Lunge.jpg"), alt: "Lunge"}
+
+    .col.col-md-4.mt-md-4
+      %hr 
+      %p 
+        = bi_icon("telephone-fill", width: 20, height: 20)
+        %tel (401) 226-6088
+      %p 
+        = bi_icon("compass", width: 20, height: 20)
+        395 Washington St Brookline, MA 02446
+      %p
+        = bi_icon("mailbox", width: 20, height: 20)
+        bobby@rrealfitness.com
+      %hr 
+
+    .row.my-3#google-map
+      %iframe{height: "100%",
+              width: "100%",
+              frameborder: "0",
+              style: "border:0",
+              src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.361750655491!2d-71.12533668411255!3d42.33481017918871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e379a2cda5b573%3A0x6c7d2762da59ce5b!2s395%20Washington%20St%2C%20Brookline%2C%20MA%2002446!5e0!3m2!1sen!2sus!4v1612672084257!5m2!1sen!2sus",
+              frameborder: "0",
+              style: "border:0;",
+              allowfullscreen:"",
+              "aria-hidden" => "false",
+              tabindex: "0"} 

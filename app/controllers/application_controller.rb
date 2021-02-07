@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
 
   def about; end
 
+  def contact; end
+
   def free_eval; end
 
   def free_eval_signup
