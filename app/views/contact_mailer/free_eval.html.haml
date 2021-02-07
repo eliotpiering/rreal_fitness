@@ -1,4 +1,5 @@
-%h1= class_name + "#" + @action
+%p= "#{@name} signed up for a free evaluation"
+%p= "Email Address: #{@email}"
 
-%p
-  = @greeting + ", find me in app/views/contact_mailer/free_eval.html.haml"
+- @data.each do |key, value|
+  %p= "#{key.to_s.humanize}: #{value}"

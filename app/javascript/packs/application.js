@@ -28,4 +28,9 @@ document.addEventListener("turbolinks:load", function() {
       new bootstrap.Alert(alert)
   })
 
+  var honeypots = document.querySelectorAll('.email-confirmation')
+  honeypots.forEach(function (h) {
+    h.style.display = 'none';
+  })
+
 })

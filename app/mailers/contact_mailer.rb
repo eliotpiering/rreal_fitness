@@ -11,23 +11,22 @@ class ContactMailer < ApplicationMailer
     mail to: "to@example.org"
   end
 
+  def confirm(data)
+    @data = data
+
+    mail to: data[:email], subject: "Thanks for signing up for a free eval."
+  end
+
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
   #   en.contact_mailer.free_eval.subject
   #
   def free_eval(data)
-    @name = data[:name]
-    @age = data[:age]
-    @email = data[:email]
-    @phone = data[:phone]
-    @fitness_goals = data[:fitness_goals]
-    @past_injuries = data[:past_injuries]
-    @date1 = data[:date1]
-    @date2 = data[:date2]
-    @how_did_you_hear_about_us = data[:how_did_you_hear_about_us]
-
     @data = data
-    mail to: data[:email]
+    @name = data[:name]
+    @email = data[:email]
+
+    mail to: data[:email], subject: "New Free Eval Client"
   end
 end

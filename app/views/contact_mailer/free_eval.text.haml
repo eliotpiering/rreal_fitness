@@ -1,3 +1,5 @@
-Contact#free_eval
+= "#{@name} signed up for a free evaluation" 
+= "Email Address: #{@email}"
 
-= @greeting + ", find me in app/views/contact_mailer/free_eval.text.haml"
+- @data.each do |key, value|
+  = "#{key.to_s.humanize}: #{value}"
