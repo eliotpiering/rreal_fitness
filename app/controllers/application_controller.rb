@@ -24,6 +24,12 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
   end
 
+  def independent_trainers; end
+
+  def testimonials; end
+
+  private
+
   def register_params
     params.permit(:name, :age, :email, :phone, :fitness_goals, :past_injuries, :date1, :date2, :how_did_you_hear_about_us)
   end

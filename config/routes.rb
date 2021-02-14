@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get "/services_alt", to: "application#services_alt"
   get "/free_eval", to: "application#free_eval"
   post "/eval", to: "application#free_eval_signup"
+  get "/testimonials", to: "application#testimonials"
+  get "/independent_trainers", to: "application#independent_trainers"
 end
