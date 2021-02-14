@@ -23,7 +23,7 @@
         -#   = bi_icon("shop", class: "text-light", width: 20, height: 20)
 
 
-        %a.navbar-brand{href: root_path}= image_tag asset_path("logo.jpg"), alt: "Rreal Fitness and Wellness", class: "img-fluid"
+        %a#logo.navbar-brand{href: root_path}= image_tag asset_path("logo.svg"), alt: "Rreal Fitness and Wellness", class: "img-fluid"
         %button.navbar-toggler{type: "button", "data-bs-toggle": "collapse", "data-bs-target": "#navbarNav", "aria-controls": "navbarNav", "aria-expanded": "false", "aria-label": "Toggle navigation"}
           %span.navbar-toggler-icon
 
@@ -37,19 +37,22 @@
             = navbar_item("Independent Trainers", independent_trainers_path)
             = navbar_item("Contact", contact_path)
           %ul.navbar-nav.ms-md-auto
-            = navbar_item(bi_icon("instagram", class: "pull-right text-light", width: 20, height: 20), "#")
+            = navbar_item(bi_icon("instagram", class: "pull-right text-light", width: 20, height: 20), "https://www.instagram.com/rreal_fitness/", target: "_blank")
             
 
     .container-fluid
       = yield
 
-    .container-fluid.footer.bg-secondary.text-white.mt-4
-      .row
-        .col.text-center.lead.my-4
-          %p© 2021 RREAL FITNESS AND WELLNESS
+    .container-fluid.footer.bg-secondary.text-white.mt-5
+      .row.align-items-center
+        .col.text-center.lead#footer-background
+          %p.mt-5© 2021 RREAL FITNESS AND WELLNESS
           %p 395 Washington St Brookline, MA 02446
           %p bobby@rrealfitness.com
           %p
-            %tel (401) 226-6088
+            %tel (617) 362-8771
 
+          %p
+            %a{href: "https://www.instagram.com/rreal_fitness/", target: "_blank"}
+              =bi_icon("instagram", class: "pull-right text-light", width: 20, height: 20)
   
